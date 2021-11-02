@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluentlearn</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
+<style>
+    /* css reset */
+    body {
+        color: white;
+        margin: 0px;
+        /* width: 550%;   */
+        /* font-family: 'Patrick Hand', cursive; */
+        font-family: 'Chakra Petch', sans-serif;
+    }
+
+    .container {
+        /* border: 2px solid rgb(208, 250, 250) ; */
+        display: block;
+        width: 64%;
+        /* margin: 82px auto; */
+        margin: 30px 48px 22px 180px;
+        border-radius: 10px;
+        text-align: center;
+        background: rgba(20, 20, 20, .2);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .9);
+        animation: zoomin 1s linear 1;
+        animation-delay: 4s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+    }
+
+    @keyframes zoomin {
+        0% {
+            transform: scale(0.5);
+            visibility: visible;
+        }
+
+        100% {
+            transform: scale(1);
+            visibility: visible;
+        }
+    }
+
+    .left {
+        display: inline-block;
+        /* border: 2px solid rgb(214, 238, 169); */
+        position: absolute;
+        left: 34px;
+        top: 22px;
+        animation: movedown 1s linear 1;
+        animation-delay: 1s;
+        /* opacity: ; */
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes movedown {
+        0% {
+            transform: translateY(-100px);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(0px);
+            visibility: visible;
+        }
+    }
+
+    .left img {
+        width: 55px;
+        /* opacity: 0.; */
+    }
+
+    .left div {
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .center {
+        display: block;
+        margin: 22px auto;
+        width: 55%;
+        /* do margin auto whenever you want anything in middle  */
+        /* border: 2px solid rgb(232, 232, 240); */
+        top: 22px;
+        /* position: fixed; */
+        position: relative;
+        animation: movedown 1s linear 1;
+        animation-delay: 2s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+        font-size: 10px;
+
+    }
+
+    .right {
+        display: inline-block;
+        /* border: 2px solid rgb(88, 225, 243); */
+        position: absolute;
+        right: 34px;
+        top: 55px;
+        animation: movedown 1s linear 1;
+        animation-delay: 3s;
+        /* opacity: ; */
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    .navbar {
+        display: inline-block;
+        /* font-size: 20px; */
+
+    }
+
+    .navbar li {
+        display: inline-block;
+
+    }
+
+    .navbar li a {
+        /* display: inline-block; */
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(7, 7, 7);
+        padding: 8px 13px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: rgb(126, 125, 125);
+    }
+
+    .btn {
+        margin: 0px 8px;
+        padding: 0px 15px;
+        background: rgb(100, 99, 99);
+        color: rgb(243, 161, 39);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        /* font-family: 'Patrick Hand', cursive; */
+        font-family: 'Chakra Petch', sans-serif;
+        position: relative;
+        /* text-decoration-color: coral; */
+    }
+
+    .btn:hover {
+        background: darkgray;
+    }
+
+    .form-group input {
+        display: block;
+        text-align: center;
+        width: 170px;
+        padding: 2px;
+        border: 2px solid black;
+        margin: 12px auto;
+        font-size: 20px;
+        border-radius: 8px;
+        /* font-family: 'Patrick Hand', cursive; */
+        font-family: 'Chakra Petch', sans-serif;
+        position: relative;
+    }
+
+    .container button {
+        width: 125px;
+        margin: 31px auto;
+        color: coral;
+        /* position: relative; */
+        /* border: 2px solid floralwhite; */
+    }
+
+    .bgimg::before {
+        content: "";
+        background: url('https://media.istockphoto.com/photos/schoolgirl-studying-with-video-online-lesson-at-home-picture-id1285962627?b=1&k=20&m=1285962627&s=170667a&w=0&h=PaplJh7fQhrHOoprLvDP9HbMMER9jo74_jcQSGXryWg=');
+        background-repeat: no-repeat;
+        padding: 50px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        background-size: cover;
+        /* background: rgba(red, green, blue, alpha); */
+        opacity: 0.75;
+    }
+
+    h1 {
+        position: relative;
+        color: black;
+    }
+
+    h3 {
+        position: relative;
+        color: black;
+    }
+
+    .foot1 {
+        /* border: 2px solid; */
+        padding: 0px 90px 0px 90px;
+        /* display: inline-block; */
+        display: table-cell;
+        margin: 22px auto;
+        width: 36%;
+        /* font-family: 'Cookie', cursive; */
+        font-size: 35px;
+        animation: moveup 1s linear 1;
+        animation-delay: 5s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+        /* transform: rotate(-90deg); */
+    }
+
+    @keyframes moveup {
+        0% {
+            transform: translateY(100px);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(0px);
+            visibility: visible;
+        }
+    }
+
+    .bottembar li a {
+        font-size: 14px;
+        /* text-decoration: none; */
+        /* color: white; */
+        padding: -1px 10px;
+        display: inline-block;
+    }
+
+    .bottembar {
+        display: block;
+        margin: -8px auto;
+        width: 54%;
+        bottom: 22px;
+        position: relative;
+    }
+
+    .bottembar li {
+        display: inline-block;
+        margin: 30px -30px -6px 0px;
+    }
+
+    .bottembar li a img {
+        /* width: 50px; */
+        display: inline-block;
+        margin: 25px;
+    }
+
+    .bottembar div {
+        text-align: center;
+        float: left;
+        padding: 19px;
+        margin: 34px -20px -6px 10px;
+        font-size: 20px;
+        /* border: 2px double black; */
+        color: black;
+        text-decoration: underline;
+        position: relative;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+</style>
+
+<body>
+    <div class="bgimg">
+        <header>
+            <!-- here left for logo -->
+            <div class="left">
+                <img src="fluent learn.png" alt="Logo of the company Fluentlearn">
+                <div>Fluentlearn</div>
+            </div>
+            <!-- center for navigation bar -->
+            <div class="center">
+                <ul class="navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="aboutus.html" >About Us</a></li>
+                    <li><a href="lab.html" target="_blank">Language lab</a></li>
+                    <li><a href="feature.html" >Features</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- right for button -->
+            <div class="right">
+                <button class="btn">Log in</button>
+                <button class="btn">Feedback</button>
+            </div>
+        </header>
+        <div class="container">
+            <h1>LANGUAGE LAB SOFTWARE TO LEARN "ENGLISH"</h1>
+            <h3>Register for free demo!!</h3>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Moblie Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="E-mail">
+                </div>
+                <button class="btn">Submit</button>
+                <button class="btn">Clear</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="foot1">
+            <ul class="bottembar">
+                <div>Connect Us:</div>
+                <li><a href="#" target="blank"><img
+                            src="https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/In-Black-54px-R.png"
+                            width="30px"></a></li>
+                <li><a href="#" target="blank"><img
+                            src="https://mk0hootsuiteblof6bud.kinstacdn.com/wp-content/uploads/2018/09/yt_icon_mono_light-310x219.png"
+                            width="40px"></a></li>
+                <li><a href=""><img
+                            src="https://th.bing.com/th/id/R.7dbd0b51c20a695901a84c4c083500f6?rik=dc2ZbPWn7UMWQQ&riu=http%3a%2f%2fsguru.org%2fwp-content%2fuploads%2f2018%2f01%2finstagram-logo-black-transparent.png&ehk=Tb3HU1pTGpTQP9GW6LIQFDE2aM1qbVl4hFhhuxLxQFo%3d&risl=&pid=ImgRaw&r=0"
+                            width="40px"></a></li>
+                <li><a href=""><img src="https://th.bing.com/th/id/OIP.v8Gt-BBMsMShXIIeieexvAHaHa?pid=ImgDet&rs=1"
+                            width="30px"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

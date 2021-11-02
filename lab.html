@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Lab</title>
+</head>
+<style>
+    
+    .left {
+        display: inline-block;
+        /* border: 2px solid rgb(214, 238, 169); */
+        position: absolute;
+        left: 34px;
+        top: 22px;
+    }
+
+    .left img {
+        width: 55px;
+        /* opacity: 0.; */
+    }
+
+    .left div {
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .center {
+        display: block;
+        margin: 22px auto;
+        width: 55%;
+        /* do margin auto whenever you want anything in middle  */
+        /* border: 2px solid rgb(232, 232, 240); */
+        top: 22px;
+        /* position: fixed; */
+        position: relative;
+    }
+
+    .line {
+        border: 5px solid rgb(8, 8, 134);
+        padding: 0px 0px 0px 0px;
+    }
+
+    .right {
+        display: inline-block;
+        /* border: 2px solid rgb(88, 225, 243); */
+        position: absolute;
+        right: 34px;
+        top: 55px;
+
+    }
+
+    .navbar {
+        display: inline-block;
+        /* font-size: 20px; */
+
+    }
+
+    .navbar li {
+        display: inline-block;
+
+    }
+
+    .navbar li a {
+        /* display: inline-block; */
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(7, 7, 7);
+        padding: 8px 13px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: rgb(126, 125, 125);
+    }
+
+    .btn {
+        margin: 0px 8px;
+        padding: 0px 15px;
+        background: rgb(196, 195, 195);
+        color: rgb(22, 22, 22);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        /* font-family: 'Patrick Hand', cursive; */
+        font-family: 'Chakra Petch', sans-serif;
+        position: relative;
+        /* text-decoration-color: coral; */
+    }
+
+    .btn:hover {
+        background: darkgray;
+    }
+
+    .box1 h1 {
+        text-align: center;
+        animation: movedown 1s linear 1;
+        animation-delay: 1s;
+        /* opacity: ; */
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    .box2 h1 {
+        text-align: center;
+        animation: movedown 1s linear 1;
+        animation-delay: 4s;
+        /* opacity: ; */
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes movedown {
+        0% {
+            transform: translateY(-100px);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(0px);
+            visibility: visible;
+        }
+    }
+
+    .box1 ul {
+        margin: 10px 400px 10px 50px;
+        /* border: 2px solid black; */
+        display: inline-block;
+
+        /* overflow: hidden; */
+    }
+
+    .box1 ul li {
+        animation: moveright 1s linear 1;
+        animation-delay: 2s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes moveright {
+        0% {
+            transform: translateX(-100);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateX(0);
+            visibility: visible;
+        }
+    }
+
+    .box2 ul li {
+        animation: moveright 1s linear 1;
+        animation-delay: 4s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes moveright {
+        0% {
+            transform: translateX(-100);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateX(0);
+            visibility: visible;
+        }
+    }
+
+    .box2 ul {
+        margin: 10px 10px 10px 50px;
+    }
+
+    .box2 ol {
+        margin: 10px 10px 10px 50px;
+    }
+
+    .box3 ol {
+        margin: 10px 10px 10px 50px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .right1 img {
+        width: 190px;
+        padding: 7px 10px 10px 10px;
+        margin: -250px 93px 10px 10px;
+        /* clip-path: circle(); */
+        float: right;
+        border: 5px dashed darkblue;
+        animation: zoomin 1s linear 1;
+        animation-delay: 2s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+    }
+
+    @keyframes zoomin {
+        0% {
+            transform: scale(0.5);
+            visibility: visible;
+        }
+
+        100% {
+            transform: scale(1);
+            visibility: visible;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <!-- here left for logo -->
+        <div class="left">
+            <img src="fluent learn.png" alt="Logo of the company Fluentlearn">
+            <div>Fluentlearn</div>
+        </div>
+        <!-- center for navigation bar -->
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="lab.html" class="active" target="_blank">Language lab</a></li>
+                <li><a href="feature.html" >Features</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- right for button -->
+        <div class="right">
+            <button class="btn">Log in</button>
+            <button class="btn">Feedback</button>
+        </div>
+        <div class="line">
+
+        </div>
+    </header>
+    <div class="box1">
+        <h1>What is Language Lab?</h1>
+        <ul class="contant">
+            <li>
+                <p>
+                    A language lab is a place where we can learn languages.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The way we have tools, equipment, chemicals and specimens in our science labs, in English language
+                    Lab, we have number of tools which teach and guide us to learn and practice languages.Language lab
+                    is the software which enhances the skills of a student, teaches English and enhances ability to
+                    Listen, Speak, Read and Write.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Listening and Speaking are the skills which require massive practice. Everyone associated with the
+                    child helps with the process and speed it up.
+                    Whereas in India, English is a second language. It is a foreign language. We need to learn the
+                    language and since it is also not commonly used outside classrooms, the opportunity to listen, speak
+                    and practice are very limited.
+                </p>
+            </li>
+            <li>
+                <p>
+                    To improve skill in any language one must listen and speak in an order and follow the system of that
+                    language.
+                    Attaining Proficiency in any language requires constant listening, speaking and practice.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="right1">
+        <img src="https://stat.ameba.jp/user_images/20181117/16/miraishnd-world/fb/ac/j/o0599055514304744218.jpg?caw=800"
+            alt="">
+        <!-- <div>PATEL KREENA JIGNESHBHAI</div> -->
+    </div>
+    <div class="box2">
+        <h1>
+            Why a english language lab?
+        </h1>
+        <ul>
+            <li>
+                <p>
+                    Language labs are becoming highly valued in schools, colleges and universities because they offer
+                    students a structured e-learning environment that is successful and reliable.
+                    New technologies are increasingly introduced in the classrooms, as they facilitate the teacher’s
+                    role in creating a more attractive learning environment for the student. It also offers, their
+                    students additional practice hours and up-to-date exercises than can be found in language books.
+                </p>
+            </li>
+            <li>
+                <p>
+                    English Language Lab has a tradition of helping learners to improve their English, whether for work,
+                    personal enrichment or English for Academic Purposes (EAP).
+                    Listening, Speaking, Reading and Writing (LSRW) are the four skills which play an important role in
+                    the acquisition of language and learning.
+                    The language lab is a very useful tool that facilitates classroom engagement and interaction via
+                    computer-based exercises and activities - to maximize language immersion.
+                    These labs provide a very different experience from the traditional system of teaching and learning
+                    languages, offering more advanced features and functionalities.
+                </p>
+            </li>
+        </ul>
+        <h1>English language lab digitally provides a learner with:</h1>
+        <ol>
+            <li>Enhancement of spoken English skills.</li>
+            <li>Practicing English using everyday scenarios.</li>
+            <li>Acquisition of vocabulary through integrated learning.</li>
+            <li>As per international standards.</li>
+            <li>A blended learning program.</li>
+            <li>Fun-filled method of lesson delivery.</li>
+            <li>Strategic content in a rich audio-visual format.</li>
+            <li>Extensive listening and speaking practice.</li>
+            <li>Enhancement of functional English and functional grammar.</li>
+            <li>Language skills gradually upgraded from A1 to C2 level (CEFR Levels).</li>
+            <li>Gradual upgradation of English language skills through a structured program.</li>
+            <li>Pronunciation practice using phonetics.</li>
+        </ol>
+    </div>
+    <div class="box3">
+        <ol>
+            <h1>Components of Language Lab</h1>
+            <li>Basic of Grammer</li>
+            <ul>
+                <li>
+                    <p>
+                        <b>Basics of Grammar-1 consists:</b>
+                        Basic English Grammar Rules, Noun, Pronoun, Verb, Adjective, Adverb, Preposition, Conjuctions,
+                        Interjections, Articles, Phrases and Clauses, Type of Sentence Structure.
+                </li>
+                <li>
+                    <b>Basics of Grammar-2 consists:</b>
+                    Verb forms, Subject and Verb Agreement, Subjects that take Singular Verbs, Tenses, Present Tense,
+                    Past Tense, Future Tense, Direct and Indirect Speech, Active and Passive Voice, When to use Active
+                    and Passive Voice, How to write a Paragraph, Punctuation Marks, Importance of Good Speech, Welcome
+                    Speech, Farewell Speech, Vote of Thanks, Collocations, Collocation – Types and Eamples, Prefix and
+                    Suffix.
+                </li>
+                </p>
+
+            </ul>
+            <li>Listening</li>
+            <ul>
+                <p>
+                    <li>
+                        <b>
+                            Importance:
+                        </b>
+                        Improves speaking and pronunciation.
+                        Develops inter-personal skills.
+                        Receptive skill that needs active participation.
+                    </li>
+                </p>
+            </ul>
+            <li>Speaking</li>
+            <ul>
+                <p>
+                    <li>
+                        <b>
+                            Importance:
+                        </b>
+                    <li>Most obvious skills</li>
+                    <li>Most interactive skill</li>
+                    <li>Develops understanding through communication</li>
+                    <li>Develops inter-personal skills (team working)</li>
+                    <li>Used in assessment</li>
+                    </li>
+                </p>
+            </ul>
+            <li>Reading</li>
+            <ul>
+                <p>
+                    <li>
+                        <b>
+                            Importance:
+                        </b>
+                    <li>Improves speaking and pronunciation.</li>
+                    <li>Develops inter-personal skills.</li>
+                    <li>Receptive skill that needs active participation.</li>
+                    </li>
+                </p>
+            </ul>
+            <li>Writing</li>
+            <ul>
+                <p>
+                    <li>
+                        <b>
+                            Importance:
+                        </b>
+                    <li>Main method of assessment</li>
+                    <li>Strict methods and conventions in academic writing</li>
+                    <li>Various formats, styles, functions depending on subject area</li>
+                    <li>Essential skill for exams</li>
+                    <li>Errors more obvious</li>
+                    </li>
+                </p>
+            </ul>
+            <li>Phonetics</li>
+            <ul>
+                <p>
+                    <li>
+                        <b>Topics covered:</b>
+                    </li>
+                    <li>Introduction to phonetics, phonetic table and its usage</li>
+                    <li>Tongue and Lip movement</li>
+                    <li>Basic consonant sounds and “Role play” activities</li>
+                    <li>Monosyllabic words to recite</li>
+                </p>
+            </ul>
+            <li>Vocabulary Builder</li>
+            <ul>
+                <p>
+                    <li>
+                        <b>This Computer Based Tutor to build your Vocabulary has been classified into 8 levels.</b>
+                    </li>
+
+                    <li>Level-1 Verbs: These are the basic verbs used by beginners.</li>
+                    <li>
+                        Level-2 Verbs: These are verbs which help users to convey actions which they observe and carry
+                        out habitually.
+
+                    </li>
+                    <li>
+                        Level-3 Verbs: The verbs of this level assist learners in improving their vocabulary.
+                    </li>
+                    <li>
+                        Level-4 Verbs: Learners who wish to become proficient in English vocabulary need exposure to
+                        these verbs.
+                    </li>
+                    <li>
+                        Level-5 Verbs: This list contains verbs of regular usage in our daily activities and formal
+                        communication.
+                    </li>
+                    <li>
+                        Level-6 Verbs: It contains verbs of an advanced level which help in conveying the intended
+                        meaning
+                        with clarity and precision.
+                    </li>
+                    <li>
+                        Level-7 Verbs: These are verbs which are unorthodox in nature. They are to be used in situations
+                        which do not occur on a daily basis.
+                    </li>
+                    <li>
+                        Level-8 Verbs: Here, we find verbs that are used by professionals in different fields of work.
+                        Hence
+                        they require specialist knowledge.
+                    </li>
+                </p>
+            </ul>
+            <li>Soft skills</li>
+            <ul>
+                <p>
+                    <li>
+                        “Soft skills” is a term used by employers to describe the personality traits and interpersonal
+                        skills required of employees to succeed in almost any job.
+                    </li>
+                    <li>
+                        In recent years, they have become more and more important to a successful professional career
+                        and recently have become a popular talking point in the media, among employers and officials.
+                    </li>
+                </p>
+            </ul>
+            <li>Life skills </li>
+            <ul>
+                <p>
+                    <li>It helps them to develop self-confidence and successfully deal with significant life changes and
+                        challenges, such as bullying and discrimination.
+                    </li>
+                    <li>
+                        It enables them to make a positive contribution by developing the expertise and experience they
+                        need to assert their rights and understand their responsibilities, while preparing them for the
+                        challenges and opportunities of adult and working life.</li>
+                    <li>
+                        It gives them a voice at school, in their community and in society at large.
+                    </li>
+                </p>
+            </ul>
+            <li>syllabus</li>
+            <ul>
+                <p>
+                    <li>As per the expert guidance we have designed the software (English Language Lab)
+                    </li>
+                    <li>
+                        As per experts' advice, student has to complete the course in 440 sessions
+                    </li>
+                    <li>
+                        Duration of each session is between 30- 45 minutes, based on the topic/concept
+                    </li>
+                    <li>
+                        We strongly advice students to follow the class /session as per sequence mentioned in this book
+                    </li>
+                    <li>
+                        Student might take less time or more time to complete each sesssion
+                    </li>
+                </p>
+            </ul>
+        </ol>
+    </div>
+    <footer>
+        <div class="foot1">
+            <h3>Reference:  <a href="https://www.englishlab.co.in/">DigitalTeacher</a></h3>
+            
+        </div>
+    </footer>
+</body>
+
+</html>
